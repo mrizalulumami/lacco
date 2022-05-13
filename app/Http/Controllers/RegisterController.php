@@ -20,11 +20,13 @@ class RegisterController extends Controller
         $paket = DB::table('paket')
             ->leftJoin('item_paket', 'paket.IDPaket', '=', 'item_paket.IDPaket')
             ->get();
+        $programs = DB::table('program')->get();
     
         return view('auth.register',[
             'title' => 'Halaman Register',
             'ruangan' => $ruangan,
             'pakets' => $paket,
+            'programs' => $programs,
         ]);
     }
     

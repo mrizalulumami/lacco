@@ -120,8 +120,8 @@
                                                 <option value="3 Month">2 Month</option>
                                                 <option value="4 Month">3 Month</option>
                                                 <option value="5 Month">> 4 Month</option> -->
-                                                @foreach($pakets as $item)
-                                                <option value="{{ $item->IDItemPaket }}">{{ $item->NamaItem }}</option>
+                                                @foreach($programs as $item)
+                                                <option value="{{ $item->IDProgram }}">{{ $item->NamaProgram }}-{{ $item->Durasi }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
