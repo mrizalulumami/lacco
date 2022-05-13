@@ -14,8 +14,8 @@ class AddForeignKeysToRiwayatProgramTable extends Migration
     public function up()
     {
         Schema::table('riwayat_program', function (Blueprint $table) {
-            $table->foreign(['IDPengguna'], 'riwayat_program_ibfk_3')->references(['IDPengguna'])->on('pengguna');
             $table->foreign(['IDProgram'], 'riwayat_program_ibfk_2')->references(['IDProgram'])->on('program');
+            $table->foreign(['IDPengguna'], 'riwayat_program_ibfk_3')->references(['IDPengguna'])->on('pengguna');
         });
     }
 
@@ -27,8 +27,8 @@ class AddForeignKeysToRiwayatProgramTable extends Migration
     public function down()
     {
         Schema::table('riwayat_program', function (Blueprint $table) {
-            $table->dropForeign('riwayat_program_ibfk_3');
             $table->dropForeign('riwayat_program_ibfk_2');
+            $table->dropForeign('riwayat_program_ibfk_3');
         });
     }
 }
