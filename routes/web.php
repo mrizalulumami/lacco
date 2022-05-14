@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\DasboardController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PelajarController;
+use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,7 +23,7 @@ Route::get('/', function () {
 });
 
 //utnuk route ke halaman login
-Route::get('/login',[LoginController::class,'index'])->middleware('guest');
+Route::get('/login',[LoginController::class,'index']);
 //proses login
 Route::post('/login',[LoginController::class,'authenticate']);
 
@@ -30,4 +32,11 @@ Route::get('/register',[RegisterController::class,'index']);
 //utnuk menyimpan data dari halaman register
 Route::post('/register',[RegisterController::class,'store']);
 
-Route::get('/dashboard',[DasboardController::class,'index'])->middleware('auth');
+// Route::get('/dashboard',[DasboardController::class,'index'])->middleware('auth');
+Route::get('/dashboard',[DasboardController::class,'index']);
+
+// Route::get('/pelajar',[PelajarController::class,'index'])->middleware('auth');
+Route::get('/pelajar',[PelajarController::class,'index']);
+
+// Route::get('/program',[ProgramController::class,'index'])->middleware('auth');
+Route::get('/program',[ProgramController::class,'index']);
