@@ -12,13 +12,13 @@ class DasboardController extends Controller
     }
 
     public function index(){
-        $pengalau = 
-        'Mau Galau, tapi malu sama kamu yamg baik-baik
-         saja tanpa aku';
-         
+        // $pengalau = 
+        // 'Mau Galau, tapi malu sama kamu yamg baik-baik
+        //  saja tanpa aku';
+
         return view('dashboard.index',[
             'title' => 'Halaman Dasboard',
-            'header' => $pengalau
+            // 'header' => $pengalau
         ]);
     }
 }
