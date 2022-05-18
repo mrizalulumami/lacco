@@ -64,7 +64,7 @@ class RegisterController extends Controller
             'Level' =>  'Officer',
         ]);
 
-        $idnya = DB::table('pengguna')->where('NamaLengkap', $validated['namalengkap'])->first();
+        // $idnya = DB::table('pengguna')->where('NamaLengkap', $validated['namalengkap'])->first();
 
         Pelajar::create([
             'NamaPelajar' =>  $validated['namalengkap'],
@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'IDPaketDiambil' => $validated['package'],
             'IDCamp' => $validated['camp'],
             'IDRuanganCamp' => $validated['camp'],
-            'KodePelajar' => $idnya->IDPengguna,
+            // 'KodePelajar' => $idnya->IDPengguna,
         ]);
         
         // Paket::create([

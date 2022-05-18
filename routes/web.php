@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DasboardController;
+use App\Http\Controllers\ItemPaketController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PelajarController;
 use App\Http\Controllers\ProgramController;
@@ -42,6 +43,10 @@ Route::get('/pelajar',[PelajarController::class,'index']);
 
 // Route::get('/program',[ProgramController::class,'index'])->middleware('auth');
 Route::get('/program',[ProgramController::class,'index']);
+Route::post('/simpanprogram',[ProgramController::class,'simpanprogram']);
+
+Route::get('/item',[ItemPaketController::class,'index']);
+Route::post('/item',[ItemPaketController::class,'simpanitem']);
 
 Route::get('/ruangan',[RuanganController::class,'index']);
 Route::post('/simpanruangan',[RuanganController::class,'simpanruangan']);

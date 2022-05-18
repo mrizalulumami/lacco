@@ -16,6 +16,7 @@ class RuanganController extends Controller
     public function index(){
 
         $dr = DB::table('views_ruangan')->get();
+        
         $druangan = DB::table('ruangan_camp')
             ->leftJoin('camp', 'ruangan_camp.IDCamp', '=', 'camp.IDCamp')
             ->get();
