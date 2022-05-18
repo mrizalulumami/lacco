@@ -25,6 +25,11 @@ class ProgramController extends Controller
         //     'title' => 'Data Pelajar',
         //     'dpelajars' => $dp,
         // ]);
-        dd($dprogram);
+        // dd($dprogram);
+        return view('dashboard.program',[
+            'title' => 'Halaman Program',
+            'active' => 'program',
+            'pelajars' => $dprogram
+        ]);
     }
 }

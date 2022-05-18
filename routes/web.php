@@ -5,6 +5,8 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PelajarController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RuanganController;
+use App\Http\Controllers\TutorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -40,3 +42,10 @@ Route::get('/pelajar',[PelajarController::class,'index']);
 
 // Route::get('/program',[ProgramController::class,'index'])->middleware('auth');
 Route::get('/program',[ProgramController::class,'index']);
+
+Route::get('/ruangan',[RuanganController::class,'index']);
+Route::post('/simpanruangan',[RuanganController::class,'simpanruangan']);
+
+Route::get('/tutor',[TutorController::class,'index']);
+
+// Route::get('/program',[ProgramController::class,'index']);

@@ -16,7 +16,7 @@
 
                         <div class="mt-5">
 
-                            <form method="post" action="/register">
+                            <form method="post" action="/simpanruangan">
                                 @csrf
                                 <div class="row">
                                     <div class="col-md-6 col-xs-12 mt-1">

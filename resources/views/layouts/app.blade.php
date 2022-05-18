@@ -12,11 +12,11 @@
   <!-- Main CSS-->
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <!-- Font-icon css-->
-  <link rel="stylesheet" type="text/css"
-    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-  <title>LACCO : Dashboard</title>
+  <title>LACCO : {{$title}}</title>
 </head>
 
 <body class="app sidebar-mini">
@@ -66,8 +66,37 @@
     <span class="ape-gene"><i class="bi bi-house-door mr-2"></i>Home</span>
     <ul class="app-menu">
 
-      <li><a class="app-menu__item fo-col" href="dashboard.html"><i class="app-menu__icon fa fa-dashboard"></i><span
-            class="app-menu__label">Dashboard</span></a></li>
+      <li>
+        <a <?= $active == 'dashboard' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/dashboard'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+
+    <span class="ape-gene"><i class="bi bi-house-door mr-2"></i>Data</span>
+    <ul class="app-menu">
+
+      <li>
+        <a <?= $active == 'ruangan' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/ruangan'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Ruangan Camp</span>
+        </a>
+      </li>
+
+      <li>
+        <a <?= $active == 'tutor' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/tutor'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Tutor</span>
+        </a>
+      </li>
+
+      <li>
+        <a <?= $active == 'pelajar' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/pelajar'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Pelajar</span>
+        </a>
+      </li>
     </ul>
   </aside>
   <main class="app-content">

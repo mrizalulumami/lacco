@@ -8,7 +8,7 @@ class DasboardController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 
     public function index(){
@@ -18,6 +18,7 @@ class DasboardController extends Controller
 
         return view('dashboard.index',[
             'title' => 'Halaman Dasboard',
+            'active' => 'dashboard',
             // 'header' => $pengalau
         ]);
     }
