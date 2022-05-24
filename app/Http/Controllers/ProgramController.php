@@ -32,4 +32,16 @@ class ProgramController extends Controller
             'pelajars' => $dprogram
         ]);
     }
+
+    public function deleteprogram($id)
+    {
+        // Item::onlyTrashed()
+        //         ->where('IDItemPaket', $id)
+        //         ->get();
+        $programs = DB::table('program')
+                        ->where('IDProgram', $id)
+                        ->delete();
+        
+        return redirect('/item')->with('success','data program berhasil dihapus!');
+    }
 }

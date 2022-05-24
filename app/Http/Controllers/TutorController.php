@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tutor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -24,5 +25,44 @@ class TutorController extends Controller
             'tutors' => $dr,
             'dcamp' => $dcamp
         ]);
+    }
+
+    public function simpantutor(Request $request)
+    {
+         // return $request->all();
+         $validated = $request->validate([
+            'namatutor' => 'required',
+            'alamat' => 'required',
+            'nowa' => 'required',
+            'photo' => 'required',
+            'email' => 'required|email:dns|unique:tutor',
+            'camplokasi' => 'required',
+        ]);
+
+        // dd('registrasi berhasil!');
+        
+        // Pengguna::create($validated);
+        Tutor::create([
+            'NamaTutor' =>  $validated['namatutor'],
+            'Alamat' => $validated['alamat'],
+            'NoWA' => $validated['nowa'],
+            'Photo' => $validated['photo'],
+            'Email' => $validated['email'],
+            'IDCamp' => $validated['camplokasi'],
+        ]);
+
+        return redirect('/tutor')->with('success','data tutor berhasil disimpan!');
+    }
+
+    public function deletetutor($id)
+    {
+        // Item::onlyTrashed()
+        //         ->where('IDItemPaket', $id)
+        //         ->get();
+        $programs = DB::table('tutor')
+                        ->where('IDTutor', $id)
+                        ->delete();
+        
+        return redirect('/item')->with('success','data tutor berhasil dihapus!');
     }
 }

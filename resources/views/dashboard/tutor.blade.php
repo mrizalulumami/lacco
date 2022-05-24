@@ -12,7 +12,7 @@
                         <label for="namatutor"><b>Nama Tutor</b></label>
                         <div class="form-group">
                             <input type="text" class="form-control @error('namatutor') is-invalid @enderror" name="namatutor" id="namatutor"
-                            placeholder="Nama Ruangan" required value="{{old('namatutor')}}">
+                            placeholder="Nama Tutor" required value="{{old('namatutor')}}">
                             @error('namatutor')
                             <div class="invalid-feedback">
                                 {{$message}}
@@ -22,8 +22,18 @@
                         <label for="alamat"><b>Alamat</b></label>
                         <div class="form-group">
                             <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="alamat"
-                            placeholder="Nama Ruangan" required value="{{old('alamat')}}">
+                            placeholder="Alamat" required value="{{old('alamat')}}">
                             @error('alamat')
+                            <div class="invalid-feedback">
+                                {{$message}}
+                            </div>
+                            @enderror
+                        </div>
+                        <label for="email"><b>Email</b></label>
+                        <div class="form-group">
+                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email"
+                            placeholder="Email" required value="{{old('email')}}">
+                            @error('email')
                             <div class="invalid-feedback">
                                 {{$message}}
                             </div>
@@ -34,7 +44,7 @@
                         <label for="nowa"><b>Nomor WA</b></label>
                         <div class="form-group">
                             <input type="text" class="form-control @error('nowa') is-invalid @enderror" name="nowa" id="nowa"
-                            placeholder="Nama Ruangan" required value="{{old('nowa')}}">
+                            placeholder="No WA" required value="{{old('nowa')}}">
                             @error('nowa')
                             <div class="invalid-feedback">
                                 {{$message}}
@@ -54,7 +64,7 @@
                         <label for="photo"><b>Upload Foto Tutor</b></label>
                         <div class="form-group">
                             <input type="text" class="form-control @error('photo') is-invalid @enderror" name="photo" id="photo"
-                            placeholder="Nama Ruangan" required value="{{old('photo')}}">
+                            placeholder="Photo" required value="{{old('photo')}}">
                             @error('photo')
                             <div class="invalid-feedback">
                                 {{$message}}

@@ -49,4 +49,22 @@ class LoginController extends Controller
             return back()->with('loginError','Login failed!');
         }
     }
+
+    // public function authenticate(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'Email' => 'required',
+    //         'Password' => 'required',
+    //     ]);
+
+    //     if(auth()->guard('web')->attempt([
+    //         'Email' => $request->Email,
+    //         'Password' => $request->Password,
+    //     ])) {
+    //         $user = auth()->user();
+    //         return redirect()->intended('/dashboard')->with('loginSukses','Selamat datang ');
+    //     } else {
+    //         return back()->with('loginError','Login failed!');
+    //     }
+    // }
 }

@@ -29,4 +29,15 @@ class PelajarController extends Controller
             'pelajars' => $dp
         ]);
     }
+    public function deletepelajar($id)
+    {
+        // Item::onlyTrashed()
+        //         ->where('IDItemPaket', $id)
+        //         ->get();
+        $programs = DB::table('pelajar')
+                        ->where('IDPelajar', $id)
+                        ->delete();
+        
+        return redirect('/item')->with('success','data pelajar berhasil dihapus!');
+    }
 }

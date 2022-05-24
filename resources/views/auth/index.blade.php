@@ -99,6 +99,15 @@
                                 </div>
                                 @enderror
                             </div>
+                            <!-- <div class="form-group">
+                                <label for="Email"><b>Email</b></label>
+                                <input type="Email" class="form-control @error('Email') is-invalid @enderror" id="Email" name="Email" placeholder="Silahkan masukan Email anda" required value="{{old('Email')}}">
+                                @error('Email')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                            </div> -->
                             <div class="form-group">
                                 <label for="Password"><b>Password</b></label>
                                 <input type="Password" class="form-control @error('Password') is-invalid @enderror" id="Password" name="Password" placeholder="Silahkan masukan password anda" required value="{{old('Username')}}">

@@ -44,5 +44,17 @@ class RuanganController extends Controller
         return redirect('/ruangan');
     }
 
+    public function deleteruangan($id)
+    {
+        // Item::onlyTrashed()
+        //         ->where('IDItemPaket', $id)
+        //         ->get();
+        $programs = DB::table('ruangan_camp')
+                        ->where('IDRuangan', $id)
+                        ->delete();
+        
+        return redirect('/item')->with('success','data ruangan berhasil dihapus!');
+    }
+
     
 }

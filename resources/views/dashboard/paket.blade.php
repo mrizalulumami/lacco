@@ -4,58 +4,26 @@
 
 <div class="container mt-5">
     <h1>{{$title}}</h1>
-    <h4>Isi form di bawah untuk menambah data tutor</h4>
-        <form method="post" action="/simpantutor">
+    <h4>Isi form di bawah untuk menambah data {{$active}}</h4>
+        <form method="post" action="/simpanpaket">
             @csrf
             <div class="row">
                 <div class="col-md-4">
-                        <label for="namatutor"><b>Nama Tutor</b></label>
+                        <label for="namapaket"><b>Nama Paket</b></label>
                         <div class="form-group">
-                            <input type="text" class="form-control @error('namatutor') is-invalid @enderror" name="namatutor" id="namatutor"
-                            placeholder="Nama Ruangan" required value="{{old('namatutor')}}">
-                            @error('namatutor')
+                            <input type="text" class="form-control @error('namapaket') is-invalid @enderror" name="namapaket" id="namapaket"
+                            placeholder="Nama Paket" required value="{{old('namapaket')}}">
+                            @error('namapaket')
                             <div class="invalid-feedback">
                                 {{$message}}
                             </div>
                             @enderror
                         </div>
-                        <label for="alamat"><b>Alamat</b></label>
+                        <label for="hpaket"><b>Harga Paket</b></label>
                         <div class="form-group">
-                            <input type="text" class="form-control @error('alamat') is-invalid @enderror" name="alamat" id="alamat"
-                            placeholder="Nama Ruangan" required value="{{old('alamat')}}">
-                            @error('alamat')
-                            <div class="invalid-feedback">
-                                {{$message}}
-                            </div>
-                            @enderror
-                        </div>
-                </div>
-                <div class="col-md-4">
-                        <label for="nowa"><b>Nomor WA</b></label>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('nowa') is-invalid @enderror" name="nowa" id="nowa"
-                            placeholder="Nama Ruangan" required value="{{old('nowa')}}">
-                            @error('nowa')
-                            <div class="invalid-feedback">
-                                {{$message}}
-                            </div>
-                            @enderror
-                        </div>
-                        <label for="camplokasi"><b>Camp dan Lokasi</b></label>
-                        <div class="input-group">
-                            <select class="custom-select" id="camplokasi" name="camplokasi">
-                                @foreach($dcamp as $item)
-                                <option value="{{ $item->IDCamp }}">{{ $item->NamaCamp }} - {{ $item->Lokasi }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                </div>
-                <div class="col-md-4">
-                        <label for="photo"><b>Upload Foto Tutor</b></label>
-                        <div class="form-group">
-                            <input type="text" class="form-control @error('photo') is-invalid @enderror" name="photo" id="photo"
-                            placeholder="Nama Ruangan" required value="{{old('photo')}}">
-                            @error('photo')
+                            <input type="number" class="form-control @error('hpaket') is-invalid @enderror" name="hpaket" id="hpaket"
+                            placeholder="Harga Paket" required value="{{old('hpaket')}}">
+                            @error('hpaket')
                             <div class="invalid-feedback">
                                 {{$message}}
                             </div>
@@ -89,32 +57,30 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nama Tutor</th>
-                    <th scope="col">Alamat</th>
-                    <th scope="col">Photo</th>
-                    <th scope="col">No WA</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Camp - Lokasi</th>
+                    <th scope="col">Nama paket</th>
+                    <th scope="col">Harga Paket</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($dcamp as $item)
+                @foreach($dpak as $item)
                 <tr>
                     <th scope="row">#</th>
-                    <td>{{$item->NamaTutor}}</td>
-                    <td>{{$item->Alamat}}</td>
-                    <td>{{$item->Photo}}</td>
-                    <td>{{$item->NoWA}}</td>
-                    <td>{{$item->Email}}</td>
-                    <td>{{$item->NamaCamp}} - {{$item->Lokasi}}</td>
+                    <td>{{$item->NamaPaket}}</td>
+                    <td>{{$item->Harga}}</td>
                     
                     <td>
                         <div class="d-flex">
                             <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i
                                     class="fa-solid fa-pen"></i></a>
-                            <a href="#" class="ml-2" data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                    class="fa-solid fa-trash" style="color: #000;"></i></a>
+                            <!-- <a href="#" class="ml-2" data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                    class="fa-solid fa-trash" style="color: #000;"></i></a> -->
+                            <form action="/deletepaket/{{$item->IDPaket}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                            
+                                <input type="submit" value="delete">
+                            </form>
                         </div>
                     </td>
                 </tr>

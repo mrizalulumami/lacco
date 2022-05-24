@@ -97,6 +97,27 @@
           <span class="app-menu__label">Pelajar</span>
         </a>
       </li>
+
+      <li>
+        <a <?= $active == 'paket' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/paket'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Paket</span>
+        </a>
+      </li>
+
+      <li>
+        <a <?= $active == 'item' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/item'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Item paket</span>
+        </a>
+      </li>
+
+      <li>
+        <a <?= $active == 'program' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/program'}}">
+          <i class="app-menu__icon fa fa-dashboard"></i>
+          <span class="app-menu__label">Program</span>
+        </a>
+      </li>
     </ul>
   </aside>
   <main class="app-content">

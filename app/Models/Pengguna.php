@@ -10,6 +10,7 @@ class Pengguna extends Authenticatable
 {
     use HasFactory;
     protected $table = 'pengguna';
+    // protected $table = 'data_pengguna';
 
     protected $guarded = ['IDPengguna'];
     
