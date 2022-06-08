@@ -15,11 +15,13 @@ class PaketController extends Controller
     public function index()
     {
         $dpak = DB::table('paket')->get();
+        $i = 1;
 
         return view('dashboard.paket',[
             'title' => 'Halaman paket',
             'active' => 'paket',
             'dpak' => $dpak,
+            'i' => $i,
         ]);
     }
 

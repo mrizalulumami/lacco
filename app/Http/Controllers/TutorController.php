@@ -14,6 +14,7 @@ class TutorController extends Controller
     }
     public function index()
     {
+        $i = 1;
         $dr = DB::table('tutor')->get();
         $dcamp = DB::table('tutor')
             ->leftJoin('camp', 'tutor.IDCamp', '=', 'camp.IDCamp')
@@ -23,21 +24,28 @@ class TutorController extends Controller
             'title' => 'Halaman Tutor',
             'active' => 'tutor',
             'tutors' => $dr,
-            'dcamp' => $dcamp
+            'dcamp' => $dcamp,
+            'i' => $i,
         ]);
     }
 
     public function simpantutor(Request $request)
     {
          // return $request->all();
+        //  ddd($request);
+        
          $validated = $request->validate([
             'namatutor' => 'required',
             'alamat' => 'required',
             'nowa' => 'required',
-            'photo' => 'required',
+            'photo' => 'image|file|max:2048',
             'email' => 'required|email:dns|unique:tutor',
             'camplokasi' => 'required',
         ]);
+
+        if($request->file('photo')){
+            $validated['photo'] = $request->file('photo')->store('tutor');
+        }
 
         // dd('registrasi berhasil!');
         

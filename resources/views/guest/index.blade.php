@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-mor.png" width="50%" alt="">
                                         <h5 class="card-title">Morning Class</h5>
@@ -82,7 +82,7 @@
                         </div>
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-eve.png" width="50%" alt="">
                                         <h5 class="card-title">Evenign Class</h5>
@@ -99,7 +99,7 @@
                         </div>
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-bed.png" width="50%" alt="">
                                         <h5 class="card-title">Bed Time Story</h5>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-afec.png" width="50%" alt="">
                                         <h5 class="card-title">AFEC</h5>
@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-thu.png" width="50%" alt="">
                                         <h5 class="card-title">Thursday Edutraining</h5>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="col-md-4 mt-2">
                             <a href="#" class="decor">
-                                <div class="card mx-auto card-red" style="width: 20rem; height: 20rem">
+                                <div class="card mx-auto card-red" style="width: 18rem; height: 20rem">
                                     <div class="card-body">
                                         <img src="/images/ico-pus.png" width="50%" alt="">
                                         <h5 class="card-title">Public Speaking Show</h5>
@@ -173,24 +173,32 @@
     <!-- end contend 2 -->
     <!-- content 3-->
     <div class="container mt-5">
-        <div id="about" class="jumbotron-red">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mt-5">
-                        <h4 class="text-white"><b>Facilities</b></h4>
-                        <div style="font-size: 15px" class="text-white">
-                            <p>The facilities obtained while in Alfalfa are that students will study and live in the
-                                Full English Area camp. Besides that, we provide student needs such as hot spot areas,
-                                LCD for movies, even counseling clinics, and also tutors who accompany daily
-                                conversations, so Alfalfa is not only a place to learn English but also a second home
-                                and a new family. This is a home for a dreamer and a home for an educator.</p>
-
-                        </div>
+        <div id="facilities" class="text-center">
+            <h4><b>Facilities</b></h4>
+            <span style="color: #64748B;">Here are the facilities we provides in each camp.</span>
+            <div class="row mt-2">
+                <div class="col-md-3 mt-2">
+                    <img src="/images/ico/fac-wifi.png" width="50%" alt="">
+                    <div class="mt-2">
+                        <span style="color: #64748B;">Hotspot Area</span>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="d-flex">
-                        <img class="mx-auto bor-heheh" src="/images/teach-cls.png" width="70%" alt="">
+                <div class="col-md-3 mt-2">
+                    <img src="/images/ico/fac-lcd.png" width="50%" alt="">
+                    <div class="mt-2">
+                        <span style="color: #64748B;">LCD for Movies</span>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <img src="/images/ico/fac-cli.png" width="50%" alt="">
+                    <div class="mt-2">
+                        <span style="color: #64748B;">Counseling clinics</span>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <img src="/images/ico/fac-tut.png" width="50%" alt="">
+                    <div class="mt-2">
+                        <span style="color: #64748B;">Tutor</span>
                     </div>
                 </div>
             </div>
@@ -199,8 +207,8 @@
     <!-- end content 3 -->
 
     <!-- content 4 -->
-    <div class="container">
-        <div class="text-center">
+    <div class="container mt-5">
+        <div id="camp" class="text-center">
             <h4><b>Camp</b></h4>
             <span style="color: #64748B;">Choose your camp and check in to keep it before learning.</span>
         </div>
@@ -417,19 +425,21 @@
         <div id="about" class="jumbotron-red">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="/images/item-dwi.png" width="100%" alt="">
+                    <img src="/images/item-dwi-2.png" width="100%" alt="">
                 </div>
                 <div class="col-md-8">
-                    <div class="mt-5">
-                        <h4 class="text-white"><b>About us</b></h4>
-                        <div style="font-size: 15px" class="text-white">
-                            <p>English language dormitory located in Kampung English Pare. Established in 2007 and has
+                    <div class="mt-5 text-white">
+                        <h4><b>About us</b></h4>
+                        <div style="font-size: 15px">
+                            <p>English language dormitory located in Kampung English Pare.
+                                Established in 2007 and has
                                 its
                                 address at Jalan Glagah and Flamboyan, Tulungrejo, Pare, Kediri, East Java. Consists of
                                 a
                                 female
                                 dormitory and a male dormitory.</p>
-                            <p class="mt-2">Alfalfa is oriented towards the development of communication science. All
+                            <p class="mt-2">Alfalfa is oriented towards the development of
+                                communication science. All
                                 new
                                 members are
                                 facilitated by regular classes, namely the AFEC (Alfalfa Fun Engish Class) class to
@@ -448,6 +458,8 @@
                                 foreign-speaking
                                 generations but also generations who dare to dream. Alfalfa was born for a generation of
                                 Indonesians who are intelligent in language, brave and character.</p>
+                            <p class="mt-2 mb-0"><b>Indah Dwi Wahyuni, CC</b></p>
+                            <p class="mt-1">Founder & CEO Alfalfa</p>
                         </div>
                     </div>
                 </div>
@@ -554,11 +566,11 @@
                         </div>
                     </div>
                     <div class="d-flex mt-5">
-                        <img class="ml-auto" src="/images/logo-white.png" width="30%" alt="">
+                        <img class="ml-auto" src="/images/alfa-white.png" width="30%" alt="">
                     </div>
-                    <div class="d-flex">
+                    <!-- <div class="d-flex">
                         <span class="ml-auto noel" style="font-size: 12px">Lacco (Learning Camp Course)</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="border-bottom mt-3"></div>
@@ -567,11 +579,10 @@
                     <span class="noel" style="font-size: 12px">Copyright© Lacco 2022 • All Rights Reserved • Powered by
                         Alfalfa </span>
                 </div>
-                <div class="ml-auto">
-                    <img class="mt-3" src="/images/fot-alfa.png" width="70%" alt="">
-                </div>
+                <!-- <div class="ml-auto">
+                    <img class="mt-3" src="assets/images/fot-alfa.png" width="70%" alt="">
+                </div> -->
             </div>
         </div>
     </div>
-    <!-- end footer -->
 @endsection

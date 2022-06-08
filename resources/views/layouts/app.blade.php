@@ -58,68 +58,102 @@
     </a>
     <!-- Sidebar toggle button--><a class="app-sidebar__toggle" href="#" data-toggle="sidebar"
       aria-label="Hide Sidebar"></a>
-
+    <ul class="app-nav">
+      <!-- User Menu-->
+      <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
+          <div class="d-flex nav-heading align-items-center">
+            <h5 class="mt-1 mr-2"><i class="bi bi-person"></i></h5>
+            <i class="bi bi-caret-down"></i>
+          </div>
+        </a>
+        <ul class="dropdown-menu settings-menu dropdown-menu-right">
+          <li>
+            <div class="d-flex m-3">
+              <img class="img-round mr-3" src="/images/user/pp.jpg" width="50px" height="50px" alt="">
+              <div class="admin-t">
+                <h5>Foto Admin Ganteng</h5>
+                <span>As ADMIN</span>
+              </div>
+            </div>
+          </li>
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
+          <li><a class="dropdown-item" href="page-user.html"><i class="fa fa-user fa-lg"></i> Profile</a></li>
+          <li><a class="dropdown-item" href="page-login.html"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+        </ul>
+      </li>
+    </ul>
   </header>
-  <!-- Sidebar menu-->
-  <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
-  <aside class="app-sidebar">
-    <span class="ape-gene"><i class="bi bi-house-door mr-2"></i>Home</span>
-    <ul class="app-menu">
+ 
 
-      <li>
-        <a <?= $active == 'dashboard' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/dashboard'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Dashboard</span>
-        </a>
-      </li>
-    </ul>
+   <!-- Sidebar menu-->
+   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+    <aside class="app-sidebar">
+      <a href="{{'/dashboard'}}">
+      <!-- <a href="dashboard.html"> -->
+        <span class="ape-gene"><i class="app-menu__icon bi bi-house-door mr-2"></i>Home</span>
+      </a>
+      <ul class="app-menu" style="font-size: 12px">
+        <!--  -->
+        <span class="ape-gene" style="color:#F87171;"><i class="app-menu__icon fa-solid fa-bars mr-2"></i><b>MAIN
+            MENU</b>
+        </span>
+        <li>
+          <a <?= $active == 'allmember' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/allmember'}}"><span class="app-menu__label">Member</span></a>
+        </li>
+        <li <?= $active == 'nonverified' || $active == 'verified' || $active == '' ? 'class="treeview is-expanded"' : 'class="treeview"'?>>
+            <a <?= $active == 'nonverified' || $active == 'verified' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="#" data-toggle="treeview">
+                <span class="app-menu__label">Member Registration</span>
+                <i class="treeview-indicator fa fa-angle-right"></i>
+            </a>
+          <ul class="treeview-menu">
+            <li>
+              <a <?= $active == 'verified' || $active == '' ? 'class="treeview-item active"' : 'class="treeview-item"'?>  href="{{'/member_nonverified'}}">Non-Verified</a>
+              <a <?= $active == 'nonverified' || $active == '' ? 'class="treeview-item active"' : 'class="treeview-item"'?>  href="{{'/member_verified'}}">Verified</a>
+              <!-- <a class="treeview-item" href="dashboard-Verified.html">Verified</a> -->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a <?= $active == 'historyprogram' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/historyprogram'}}">
+              <span class="app-menu__label">Program History</span>
+          </a>
+        </li>
+        <!--  -->
+        <span class="ape-gene" style="color:#F87171;"><i class="app-menu__icon fa-solid fa-bars mr-2"></i><b>MASTER
+            DATA</b>
+        </span>
+        <li>
+          <a <?= $active == 'paket' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/paket'}}"><span class="app-menu__label">Package</span></a>
+        </li>
+        <li>
+          <a <?= $active == 'program' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/program'}}"><span class="app-menu__label">Program</span></a>
+        </li>
+        <li>
+          <a <?= $active == 'camp' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/camp'}}"><span class="app-menu__label">Camp</span></a>
+        </li>
+        <li>
+          <a <?= $active == 'tutor' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/tutor'}}"><span class="app-menu__label">Tutor</span></a>
+        </li>
+        <li>
+          <a <?= $active == 'user' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/user'}}"><span class="app-menu__label">User</span></a>
+        </li>
+        <!--  -->
+        <span class="ape-gene" style="color:#F87171;"><i class="app-menu__icon fa-solid fa-bars mr-2"></i><b>REPORTING</b>
+        </span>
+        <li>
+          <a class="app-menu__item fo-col" href="dashboard-Registration.html"><span
+              class="app-menu__label">Registration</span></a>
+        </li>
+        <li>
+          <a class="app-menu__item fo-col" href="dashboard-Program_Report.html"><span class="app-menu__label">Program
+              Report</span></a>
+        </li>
+        <li>
+          <a class="app-menu__item fo-col" href="dashboard-Grading.html"><span class="app-menu__label">Grading</span></a>
+        </li>
 
-    <span class="ape-gene"><i class="bi bi-house-door mr-2"></i>Data</span>
-    <ul class="app-menu">
-
-      <li>
-        <a <?= $active == 'ruangan' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/ruangan'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Ruangan Camp</span>
-        </a>
-      </li>
-
-      <li>
-        <a <?= $active == 'tutor' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?> href="{{'/tutor'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Tutor</span>
-        </a>
-      </li>
-
-      <li>
-        <a <?= $active == 'pelajar' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/pelajar'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Pelajar</span>
-        </a>
-      </li>
-
-      <li>
-        <a <?= $active == 'paket' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/paket'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Paket</span>
-        </a>
-      </li>
-
-      <li>
-        <a <?= $active == 'item' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/item'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Item paket</span>
-        </a>
-      </li>
-
-      <li>
-        <a <?= $active == 'program' || $active == '' ? 'class="app-menu__item fo-col active"' : 'class="app-menu__item fo-col"'?>  href="{{'/program'}}">
-          <i class="app-menu__icon fa fa-dashboard"></i>
-          <span class="app-menu__label">Program</span>
-        </a>
-      </li>
-    </ul>
-  </aside>
+      </ul>
+    </aside>
   <main class="app-content">
     @yield('content')
   </main>
@@ -131,6 +165,108 @@
 
   <!-- Page specific javascripts-->
   <script type="text/javascript" src="/js/dash/plugins/chart.js"></script>
+  <!-- <script type="text/javascript" src="/assets/js/dash/plugins/chart.js"></script> -->
+  <script type="text/javascript">
+    var data = {
+      labels: ["2018", "2019", "2020", "2021", "2020"],
+      datasets: [
+        {
+          label: "My First dataset",
+          fillColor: "rgba(220,220,220,0.2)",
+          strokeColor: "rgba(239, 68, 68)",
+          pointColor: "rgba(239, 68, 68)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: [65, 59, 80, 81, 56]
+        },
+        // {
+        //   label: "My Second dataset",
+        //   fillColor: "rgba(151,187,205,0.2)",
+        //   strokeColor: "rgba(151,187,205,1)",
+        //   pointColor: "rgba(151,187,205,1)",
+        //   pointStrokeColor: "#fff",
+        //   pointHighlightFill: "#fff",
+        //   pointHighlightStroke: "rgba(151,187,205,1)",
+        //   data: [28, 48, 40, 19, 86]
+        // }
+      ]
+    };
+    var pdata = [
+      {
+        value: 300,
+        color: "#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      }
+    ]
+
+    var ctxl = $("#lineChartDemo").get(0).getContext("2d");
+    var lineChart = new Chart(ctxl).Line(data);
+  </script>
+  <script type="text/javascript">
+    var data = {
+      labels: ["2018", "2019", "2020", "2021", "2020"],
+      datasets: [
+        {
+          label: "My First dataset",
+          fillColor: "rgba(239, 68, 68)",
+          strokeColor: "rgba(239, 68, 68)",
+          pointColor: "rgba(239, 68, 68)",
+          pointStrokeColor: "#fff",
+          pointHighlightFill: "#fff",
+          pointHighlightStroke: "rgba(220,220,220,1)",
+          data: [65, 59, 80, 81, 56]
+        },
+        // {
+        //   label: "My Second dataset",
+        //   fillColor: "rgba(151,187,205,0.2)",
+        //   strokeColor: "rgba(151,187,205,1)",
+        //   pointColor: "rgba(151,187,205,1)",
+        //   pointStrokeColor: "#fff",
+        //   pointHighlightFill: "#fff",
+        //   pointHighlightStroke: "rgba(151,187,205,1)",
+        //   data: [28, 48, 40, 19, 86]
+        // }
+      ]
+    };
+    var pdata = [
+      {
+        value: 300,
+        color: "#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red"
+      },
+      {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+      },
+      {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+      }
+    ]
+
+
+    var ctxb = $("#barChartDemo").get(0).getContext("2d");
+    var barChart = new Chart(ctxb).Bar(data);
+  </script>
 
 </body>
 

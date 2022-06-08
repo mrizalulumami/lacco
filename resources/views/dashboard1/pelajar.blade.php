@@ -85,8 +85,13 @@
                         <div class="d-flex">
                             <a href="#" class="mr-2" data-toggle="tooltip" data-placement="top" title="Edit"><i
                                     class="fa-solid fa-pen"></i></a>
-                            <a href="#" class="ml-2" data-toggle="tooltip" data-placement="top" title="Delete"><i
-                                    class="fa-solid fa-trash" style="color: #000;"></i></a>
+                            <!-- <a href="#" class="ml-2" data-toggle="tooltip" data-placement="top" title="Delete"><i
+                                    class="fa-solid fa-trash" style="color: #000;"></i></a> -->
+                            <form action="/deletepelajar/{{$item->IDPelajar}}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                                <input type="submit" value="delete">
+                            </form>
                         </div>
                     </td>
                 </tr>
